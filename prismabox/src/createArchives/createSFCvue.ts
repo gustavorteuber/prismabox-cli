@@ -1,4 +1,5 @@
-import fs from 'fs';
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import * as fs from 'fs'
 
 export function createVueFile(moduleName, nameArchive) {
   const vueContent = `
@@ -12,7 +13,7 @@ export function createVueFile(moduleName, nameArchive) {
         <h1>${nameArchive}</h1>
       </div>
     </template>
-  `;
-  const vueWorkspace = `./src/views/${moduleName}/${nameArchive}.vue`;
-  fs.writeFileSync(vueWorkspace, vueContent);
+  `
+  const vueWorkspace = `./src/views/${moduleName}/${nameArchive}.vue`
+  fs.writeFileSync(vueWorkspace, vueContent)
 }

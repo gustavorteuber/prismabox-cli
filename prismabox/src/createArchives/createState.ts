@@ -1,4 +1,5 @@
-import fs from 'fs';
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import * as fs from 'fs'
 
 export function createStoreFile(moduleName, nameArchive) {
   const tsContent = `
@@ -11,7 +12,7 @@ export function createStoreFile(moduleName, nameArchive) {
       actions: {
       },
     })
-  `;
-  const tsWorkspace = `./src/stores/${moduleName}/${nameArchive}.ts`;
-  fs.writeFileSync(tsWorkspace, tsContent);
+  `
+  const tsWorkspace = `./src/stores/${moduleName}/${nameArchive}.ts`
+  fs.writeFileSync(tsWorkspace, tsContent)
 }
