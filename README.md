@@ -11,14 +11,12 @@ yarn global add prismabox-cli
 Para iniciar a ferramenta, basta usar o comando prismabox-cli seguido do nome da ação desejada. Por exemplo:
 
 ```bash
-prismabox-cli start
+prismabox create-vue-module
 ```
 Isso iniciará a interface de linha de comando do Prismabox, onde você poderá escolher entre várias opções para criar módulos Vue.js.
 
 ## Funções Principais
-- Criar uma nova Vue + Router🧭: Esta opção permite criar um novo projeto Vue.js com suporte a router.
 - Criar uma nova Vue + Router🧭 + Pinia🍍: Esta opção permite criar um novo projeto Vue.js com suporte a router e Pinia para gerenciamento de estado.
-- Criar um módulo filho: Esta opção permite criar um novo módulo dentro de um projeto Vue.js existente.
 
 
 Contribuição
