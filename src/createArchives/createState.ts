@@ -2,8 +2,7 @@
 import * as fs from 'fs'
 
 export function createStoreFile(moduleName: string, nameArchive: string) {
-  const tsContent = `
-import { defineStore } from 'pinia'
+  const tsContent = `import { defineStore } from 'pinia'
 import axios from '@axios'
 
 export const useRafaStore = defineStore('${moduleName}', {

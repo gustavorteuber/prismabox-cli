@@ -2,14 +2,13 @@
 import * as fs from 'fs'
 
 export function createRouterFile(moduleName: string, nameArchive: string) {
-  const routerContent = `
-import { createRouter, createWebHistory } from 'vue-router'
+  const routerContent = `import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
     path: '${moduleName}',
     name: '${moduleName}',
-    component: () => import(@/views/${moduleName}/${nameArchive}),
+    component: () => import('@/views/${moduleName}/${nameArchive}'),
   },
 ]
 
