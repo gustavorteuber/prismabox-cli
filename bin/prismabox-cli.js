@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-
-import { program } from 'commander';
 import inquirer from 'inquirer';
-import { asciiArt, resizeAscii } from './art/ascii.js';
+import { createVueFile } from '../src/createArchives/createSFCvue.js';
+import { createStoreFile } from '../src/createArchives/createState.js';
+import { createRouterFile } from '../src/createArchives/createRouter.js';
+import { asciiArt, resizeAscii } from '../src/art/ascii.js';
+import fs from 'fs';
 
 function printAscii() {
   console.clear();
@@ -23,14 +25,14 @@ printAscii();
 printDivider();
 
 const mainActions = [
-  {
-    name: 'Criar uma nova Vue + Router🧭',
-    submenu: [
-      { name: 'Criar novo módulo', action: createNewModule },
-      { name: 'Criar dentro de um módulo existente', action: createInExistingModule },
-      { name: 'Voltar ao Menu Inicial' }
-    ]
-  },
+  // {
+  //   name: 'Criar uma nova Vue + Router🧭',
+  //   submenu: [
+  //     { name: 'Criar novo módulo', action: createNewModule },
+  //     { name: 'Criar dentro de um módulo existente', action: createInExistingModule },
+  //     { name: 'Voltar ao Menu Inicial' }
+  //   ]
+  // },
   {
     name: 'Criar uma nova Vue + Router🧭 + Pinia🍍',
     submenu: [
@@ -40,7 +42,7 @@ const mainActions = [
     ]
   },
   {
-    name: 'Criar um módulo filho',
+    name: "Criar um módulo 'children'",
     action: createChildModule
   },
   {
@@ -53,7 +55,43 @@ const mainActions = [
 ];
 
 async function createNewModule() {
-  console.log('Criando um novo módulo...');
+  const { moduleName } = await inquirer.prompt([
+    {
+      type: 'input',
+      name: 'moduleName',
+      message: 'Digite o nome do módulo:'
+    }
+  ]);
+
+  if (!moduleName) {
+    console.log('Nome do módulo não fornecido. Abortando criação.');
+    return;
+  }
+
+  const nameArchive = moduleName; 
+
+  const dir = `./src/views/${moduleName}`;
+  if (!fs.existsSync(dir)){
+      fs.mkdirSync(dir, { recursive: true });
+  }
+
+  createVueFile(moduleName, nameArchive);
+
+  const stateDir = `./src/stores/${moduleName}`;
+  if (!fs.existsSync(stateDir)){
+      fs.mkdirSync(stateDir, { recursive: true });
+  }
+
+  createStoreFile(moduleName, nameArchive);
+
+  const routerDir = `./src/router/${moduleName}`;
+  if (!fs.existsSync(routerDir)){
+      fs.mkdirSync(routerDir, { recursive: true });
+  }
+
+  createRouterFile(moduleName, nameArchive);
+
+  console.log(`Módulo '${moduleName}' criado!`);
 }
 
 async function createInExistingModule() {
