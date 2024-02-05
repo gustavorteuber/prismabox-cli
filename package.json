@@ -3,10 +3,10 @@
   "version": "1.5.0",
   "main": "index.js",
   "bin": {
-    "start-prisma": "./src/index.js"
+    "prismabox-cli": "./bin/prismabox"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node lib/index.js"
   },
   "type": "module",
   "license": "MIT",
