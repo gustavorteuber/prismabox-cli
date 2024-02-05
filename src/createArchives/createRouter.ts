@@ -8,7 +8,7 @@ const routes = [
   {
     path: '${moduleName}',
     name: '${moduleName}',
-    component: () => import('@/views/${moduleName}/${nameArchive}'),
+    component: () => import('@/views/${moduleName}/${nameArchive}.vue'),
   },
 ]
 
@@ -17,8 +17,7 @@ const router = createRouter({
   routes,
 })
 
-export default router
-  `
+export default router`
   const routerWorkspace = `./src/router/${moduleName}/${moduleName}.ts`
   fs.writeFileSync(routerWorkspace, routerContent)
 }

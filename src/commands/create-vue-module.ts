@@ -36,7 +36,7 @@ const command: GluegunCommand = {
     const { moduleName } = await prompt.ask({
       type: 'input',
       name: 'moduleName',
-      message: 'Digite o nome do módulo:',
+      message: 'Digite o nome do módulo que deseja criar:',
     })
 
     if (!moduleName) {

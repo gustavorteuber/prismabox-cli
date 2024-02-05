@@ -6,8 +6,7 @@ export function createVueFile(moduleName: string, nameArchive: string) {
   <div>
     <h1>Rafa</h1>
   </div>
-</template>
-  `
+</template>`
   const vueWorkspace = `./src/views/${moduleName}/${nameArchive}.vue`
   fs.writeFileSync(vueWorkspace, vueContent)
 }

@@ -20,9 +20,7 @@ export const useRafaStore = defineStore('${moduleName}', {
       }
     },
   },
-})
-  
-  `
+})`
   const tsWorkspace = `./src/stores/${moduleName}/${nameArchive}.ts`
   fs.writeFileSync(tsWorkspace, tsContent)
 }
