@@ -1,13 +1,7 @@
 {
   "name": "prismabox-cli",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "main": "index.js",
-  "bin": {
-    "prismabox-cli": "./bin/prismabox"
-  },
-  "scripts": {
-    "start": "node lib/index.js"
-  },
   "type": "module",
   "license": "MIT",
   "dependencies": {
