@@ -1,6 +1,6 @@
 {
   "name": "prismabox-cli",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "prismabox CLI",
   "types": "build/types/types.d.ts",
   "bin": {
