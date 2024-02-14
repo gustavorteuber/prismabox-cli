@@ -1,6 +1,6 @@
 {
   "name": "prismabox-cli",
-  "version": "1.9.4",
+  "version": "1.9.6",
   "description": "prismabox CLI",
   "types": "build/types/types.d.ts",
   "bin": {
@@ -28,7 +28,8 @@
   "license": "MIT",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "gluegun": "latest"
+    "gluegun": "latest",
+    "prismabox-cli": "1.9.5"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
