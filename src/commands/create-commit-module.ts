@@ -18,7 +18,7 @@ const command: GluegunCommand = {
       type: 'select',
       name: 'type',
       message: 'Selecione o tipo de commit:',
-      choices: ['hotfix', 'task', 'feature'],
+      choices: ['Hotfix', 'Task', 'Feature'],
     })
 
     const { message } = await prompt.ask({
@@ -33,6 +33,7 @@ const command: GluegunCommand = {
       emojiMap[type]
     } [${type}/${branch.trim()}] ${message}`
 
+    await system.run('git pull')
     await system.run('git add .')
     await system.run(`git commit -m "${commitMessage}"`)
     await system.run('git push')
