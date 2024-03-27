@@ -9,9 +9,9 @@ const command: GluegunCommand = {
     const { print, system, prompt } = toolbox
 
     const emojiMap = {
-      hotfix: '🔧',
-      task: '🛠️',
-      feature: '✨',
+      Hotfix: '🔧',
+      Task: '🛠️',
+      Feature: '✨',
     }
 
     const { type } = await prompt.ask({
@@ -30,12 +30,13 @@ const command: GluegunCommand = {
     const branch = await system.run('git rev-parse --abbrev-ref HEAD')
 
     const commitMessage = `${
-      emojiMap[type]
+      emojiMap[type.toLowerCase()]
     } [${type}/${branch.trim()}] ${message}`
 
     await system.run('git pull')
     await system.run('git add .')
     await system.run(`git commit -m "${commitMessage}"`)
+    console.log(commitMessage)
     await system.run('git push')
 
     print.success('Commit realizado e push efetuado com sucesso!')
