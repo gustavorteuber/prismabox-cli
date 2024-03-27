@@ -4,7 +4,7 @@ import * as fs from 'fs'
 export function createVueFile(moduleName: string, nameArchive: string) {
   const vueContent = `<template>
   <div>
-    <h1>Rafa</h1>
+    <h1>${moduleName}</h1>
   </div>
 </template>`
   const vueWorkspace = `./src/views/${moduleName}/${nameArchive}.vue`

@@ -21,8 +21,8 @@ ${colors.cyan}      *%%+::=--=********+---+ :*%%+
 ${colors.cyan}      *%:=#%***=--=**+---+***#*--%+     
 ${colors.cyan}      *%.  :******=-.-+******   :%+     
 ${colors.cyan}      *%.  :****#%#*:##%#****   :%+     
-${colors.cyan}      *%.   :=****#%%#*****=:   :%+     ${colors.red}Seja bem-vindo ao PrismaBox-CLI!
-${colors.cyan}      *%.      :+**#%#**=:      :%+            ${colors.gray}by: gustavorteuber
+${colors.cyan}      *%.   :=****#%%#*****=:   :%+     ${colors.cyan}Gerar modulo TYPESCRIPT PrismaBox!     
+${colors.cyan}      *%.      :+**#%#**=:      :%+            ${colors.cyan}Prisma ${colors.gray}Box
 ${colors.cyan}      *%-        .-*%+:.        =%+     
 ${colors.cyan}      .=##+:  .....+%-.......-+%*-      
 ${colors.cyan}         .=#%*-....+%-....=*%*=.        

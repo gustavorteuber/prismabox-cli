@@ -1,13 +1,13 @@
 import { GluegunCommand } from 'gluegun'
 import * as fs from 'fs'
-import { createVueFile } from '../createArchives/createSFCvue'
-import { createStoreFile } from '../createArchives/createState'
-import { createRouterFile } from '../createArchives/createRouter'
-import { asciiArt, resizeAscii } from '../art/ascii'
+import { createVueFile } from '../createArchivesVUE/createSFCvue'
+import { createStoreFile } from '../createArchivesVUE/createState'
+import { createRouterFile } from '../createArchivesVUE/createRouter'
+import { asciiArt, resizeAscii } from '../art/asciiVue'
 
 const command: GluegunCommand = {
   name: 'create-vue-module',
-  description: 'Cria um novo módulo',
+  description: 'Cria um novo módulo no VueJS',
 
   run: async (toolbox) => {
     const {
