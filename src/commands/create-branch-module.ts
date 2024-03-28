@@ -17,7 +17,6 @@ const command: GluegunCommand = {
 
     await system.run('git pull')
     await system.run(`git checkout -b "PBX-${branchName}"`)
-    await system.run('git push')
 
     print.success(`Branch PBX-${branchName} Criada 🚀!`)
   },

@@ -33,7 +33,6 @@ const command: GluegunCommand = {
       emojiMap[type.toLowerCase()]
     } [${type}/${branch.trim()}] ${message}`
 
-    await system.run('git pull')
     await system.run('git add .')
     await system.run(`git commit -m "${commitMessage}"`)
     await system.run('git push')
