@@ -9,16 +9,16 @@ const command: GluegunCommand = {
     const { print, system, prompt } = toolbox
 
     const emojiMap = {
-      Hotfix: '🔧',
-      Task: '🛠️',
-      Feature: '✨',
+      hotfix: '🔧',
+      task: '🛠️',
+      feature: '✨',
     }
 
     const { type } = await prompt.ask({
       type: 'select',
       name: 'type',
       message: 'Selecione o tipo de commit:',
-      choices: ['Hotfix', 'Task', 'Feature'],
+      choices: ['hotfix', 'task', 'feature'],
     })
 
     const { message } = await prompt.ask({
@@ -38,22 +38,38 @@ const command: GluegunCommand = {
     await system.run(`git commit -m "${commitMessage}"`)
     await system.run('git push')
 
-    print.success(`Commit realizado e push efetuado com sucesso!
-    Ta voando hein! 🚀
-     |
-    / \
-   /   \
-  *-----*
-  | o o |
-  | o o |
-  | o o |
-  | o o |
-  *-----*
-   /___\
-  /     \
-  -------
-
-    `)
+    print.success(`Commit realizado e push efetuado com sucesso!`)
+    print.success('Ta voando! 🚀')
+    print.success(`                       
+                       ^
+                      / \
+                     /___\
+                    |=   =|
+                    |  P  |
+                    |  R  |
+                    |  I  |
+                    |  S  |
+                    |  M  |
+                    |  A  |
+                    |  B  |
+                    |  O  |
+                    |  X  |
+                    |     |
+                   /|##!##|\
+                  / |##!##| \
+                 /  |##!##|  \
+                |  / ^ | ^ \  |
+                | /  ( | )  \ |
+                |/   ( | )   \|
+                    ((   ))
+                   ((  :  ))
+                   ((  :  ))
+                    ((   ))
+                     (( ))
+                      ( )
+                       .
+                       .
+                       .`)
   },
 }
 
