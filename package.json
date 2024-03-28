@@ -1,6 +1,6 @@
 {
   "name": "prismabox-tool",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "prismabox CLI",
   "types": "build/types/types.d.ts",
   "bin": {
@@ -29,7 +29,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "gluegun": "latest",
-    "prismabox-tool": "^1.0.0"
+    "prismabox-tool": "^1.2.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
