@@ -35,7 +35,9 @@ const command: GluegunCommand = {
 
     await system.run('git add .')
     await system.run(`git commit -m "${commitMessage}"`)
-    await system.run('git push')
+    await system.run(
+      'git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+    )
 
     print.success(`Commit realizado e push efetuado com sucesso!`)
     print.success('Ta voando! 🚀')
