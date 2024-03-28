@@ -2,7 +2,7 @@ import { GluegunCommand } from 'gluegun'
 
 const command: GluegunCommand = {
   name: 'create-branch',
-  description: 'Cria uma branch e Publica no github',
+  description: 'Cria uma branch localmente',
 
   run: async (toolbox) => {
     const { print, system, prompt } = toolbox
@@ -10,16 +10,21 @@ const command: GluegunCommand = {
     const { message } = await prompt.ask({
       type: 'input',
       name: 'message',
-      message: 'Insira o código da Atividade (Apenas os numeros):',
+      message: 'Insira o código da Atividade (Apenas os números):',
     })
 
     const branchName = `${message}`
 
-    await system.run('git pull')
-    await system.run(`git checkout -b "PBX-${branchName}"`)
-    await system.run('git push')
+    const pullResult = await system.run('git pull')
+    if (!pullResult.includes('Already up to date.')) {
+      print.success('Atualizado com sucesso!')
+    }
 
-    print.success(`Branch PBX-${branchName} Criada 🚀!`)
+    await system.run(`git checkout -b "PBX-${branchName}"`)
+
+    print.success(
+      `Branch PBX-${branchName} Criada localmente e alterada para ela 🚀!`
+    )
   },
 }
 
