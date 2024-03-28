@@ -36,10 +36,12 @@ const command: GluegunCommand = {
     await system.run('git pull')
     await system.run('git add .')
     await system.run(`git commit -m "${commitMessage}"`)
-    console.log(commitMessage)
     await system.run('git push')
 
     print.success('Commit realizado e push efetuado com sucesso!')
+    console.log(`
+    Tá voando
+    `)
   },
 }
 
