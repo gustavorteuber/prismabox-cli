@@ -38,8 +38,7 @@ const command: GluegunCommand = {
     await system.run(`git commit -m "${commitMessage}"`)
     await system.run('git push')
 
-    print.success(`Commit realizado e push efetuado com sucesso!
-    Ta voando hein! 🚀
+    print.success(`Ta voando hein! 🚀
      |
     / \
    /   \
@@ -52,7 +51,6 @@ const command: GluegunCommand = {
    /___\
   /     \
   -------
-
     `)
   },
 }
