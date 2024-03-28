@@ -38,9 +38,21 @@ const command: GluegunCommand = {
     await system.run(`git commit -m "${commitMessage}"`)
     await system.run('git push')
 
-    print.success('Commit realizado e push efetuado com sucesso!')
-    console.log(`
-    Tá voando
+    print.success(`Commit realizado e push efetuado com sucesso!
+    Ta voando hein! 🚀
+     |
+    / \
+   /   \
+  *-----*
+  | o o |
+  | o o |
+  | o o |
+  | o o |
+  *-----*
+   /___\
+  /     \
+  -------
+
     `)
   },
 }
