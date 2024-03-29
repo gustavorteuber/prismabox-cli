@@ -40,11 +40,10 @@ const command: GluegunCommand = {
     )
 
     print.success(`Commit realizado e push efetuado com sucesso!`)
-    print.success('Ta voando! 🚀')
-    print.success(`  
+    print.success(`
                        ^
-                      / \
-                     /___\
+                      / \\
+                     /___\\
                     |=   =|
                     |  P  |
                     |  R  |
@@ -56,12 +55,12 @@ const command: GluegunCommand = {
                     |  O  |
                     |  X  |
                     |     |
-                   /|##!##|\
-                  / |##!##| \
-                 /  |##!##|  \
-                |  / ^ | ^ \  |
-                | /  ( | )  \ |
-                |/   ( | )   \|
+                   /|##!##|\\
+                  / |##!##| \\
+                 /  |##!##|  \\
+                |  / ^ | ^ \\  |
+                | /  ( | )  \\ |
+                |/   ( | )   \\|
                     ((   ))
                    ((  :  ))
                    ((  :  ))
@@ -71,7 +70,8 @@ const command: GluegunCommand = {
                        .
                        .
                        .
-    `)
+`)
+    print.success('Ta voando! 🚀')
   },
 }
 
