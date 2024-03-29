@@ -29,7 +29,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "gluegun": "latest",
-    "prismabox-tool": "^1.6.0"
+    "prismabox-tool": "2.1.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
