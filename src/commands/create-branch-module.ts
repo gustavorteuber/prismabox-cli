@@ -13,10 +13,17 @@ const command: GluegunCommand = {
       message: 'Insira o código da Atividade (Apenas os numeros):',
     })
 
+    const { type } = await prompt.ask({
+      type: 'select',
+      name: 'message2',
+      message: 'Insira o tipo de atividade:',
+      choices: ['tarefa', 'poc', 'bug', 'story'],
+    })
+
     const branchName = `${message}`
 
     await system.run('git pull')
-    await system.run(`git checkout -b "PBX-${branchName}"`)
+    await system.run(`git checkout -b "PBX-${branchName}-${type}"`)
 
     print.success(`Branch PBX-${branchName} Criada 🚀!`)
   },
