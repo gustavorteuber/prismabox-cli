@@ -15,7 +15,7 @@ const command: GluegunCommand = {
 
     const { type } = await prompt.ask({
       type: 'select',
-      name: 'message2',
+      name: 'type',
       message: 'Insira o tipo de atividade:',
       choices: ['tarefa', 'poc', 'bug', 'story'],
     })
