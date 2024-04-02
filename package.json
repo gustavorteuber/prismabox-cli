@@ -28,7 +28,8 @@
   "license": "MIT",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "gluegun": "latest"
+    "gluegun": "latest",
+    "prismabox-tool": "2.8.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
