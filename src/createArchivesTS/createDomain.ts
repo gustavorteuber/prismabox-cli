@@ -11,6 +11,6 @@ export function createDomainFile(moduleName: string) {
 }
 `
 
-  const entitieWorkspace = `./src/Modules/Shared/Domain/${moduleName}.ts`
+  const entitieWorkspace = `./src/Shared/Domain/${moduleName}.ts`
   fs.writeFileSync(entitieWorkspace, domainContent)
 }
