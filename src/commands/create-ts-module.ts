@@ -1,11 +1,12 @@
 import { GluegunCommand } from 'gluegun'
 import { createControllerFile } from '../createArchivesTS/createController'
-import { createEntitiesFile } from '../createArchivesTS/createEntities'
+import { createDomainFile } from '../createArchivesTS/createDomain'
 import { createRepositoryFile } from '../createArchivesTS/createRepository'
 import { createUseCaseFile } from '../createArchivesTS/createUseCase'
 import * as fs from 'fs'
 import { createRouterFile } from '../createArchivesTS/createRouter'
 import { asciiArt, resizeAscii } from '../art/asciiTS'
+import { createSchemasFile } from '../createArchivesTS/createSchemas'
 
 const command: GluegunCommand = {
   name: 'create-ts-module',
@@ -20,7 +21,7 @@ const command: GluegunCommand = {
     }
 
     const printWelcomeMessage = () => {
-      console.log('Bem-vindo ao PrismaBox-CLI!\n')
+      console.log('Bem-vindo ao Prismabox-tool!\n')
     }
 
     const printDivider = () => {
@@ -75,13 +76,13 @@ const command: GluegunCommand = {
     if (selectedOptions.includes('Domain')) {
       const directoryPath = `./src/Shared/Domain`
       fs.mkdirSync(directoryPath, { recursive: true })
-      createEntitiesFile(moduleName, moduleType)
+      createDomainFile(moduleName)
     }
 
     if (selectedOptions.includes('Schema (ZoD)')) {
       const directoryPath = `./src/Modules/${moduleType}/${moduleName}/schemas`
       fs.mkdirSync(directoryPath, { recursive: true })
-      createEntitiesFile(moduleName, moduleType)
+      createSchemasFile(moduleName, moduleType)
     }
 
     if (selectedOptions.includes('Repository')) {
