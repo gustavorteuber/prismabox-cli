@@ -4,13 +4,13 @@ import * as fs from 'fs'
 export function createUseCaseFile(moduleName: string, WebOrApp: string) {
   const useCaseContent = `// import { ApiThrowErrors } from '../../../../Config/helpers/apiThrowErrors';
 import { type IDatabase } from '../../../../Config/infra/database/iDatabase';
-import { type ${WebOrApp}${moduleName}Entity } from '../entities/${WebOrApp}${moduleName}Entity';
+// import ${moduleName} from '../../../../Shared/Domain/${moduleName}';
 // import i18n from '../../../../Language/i18n';
 
 export default class ${WebOrApp}${moduleName}UseCase {
   constructor (private readonly database: IDatabase) {}
 
-  async execute (): Promise<${WebOrApp}${moduleName}Entity> {}
+  async execute (): Promise<any> {}
 }
 
 // usar o i18n para traduzir as mensagens de erro

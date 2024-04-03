@@ -4,7 +4,6 @@ import * as fs from 'fs'
 export function createDomainFile(moduleName: string) {
   const domainContent = `export default class ${moduleName} {
   //  constructor () {}
-  
   //  static restore (): ${moduleName} {
   //    return new ${moduleName}();
   //  }

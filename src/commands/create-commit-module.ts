@@ -40,6 +40,7 @@ const command: GluegunCommand = {
     )
 
     print.success(`Commit realizado e push efetuado com sucesso!`)
+    print.success('Ta voando! 🚀')
     print.success(`  
                        ^
                       / \
@@ -71,7 +72,6 @@ const command: GluegunCommand = {
                        .
                        .
     `)
-    print.success('Ta voando! 🚀')
   },
 }
 

@@ -88,11 +88,7 @@ const command: GluegunCommand = {
     if (selectedOptions.includes('Repository')) {
       const directoryPath = `./src/Modules/${moduleType}/${moduleName}/repositories`
       fs.mkdirSync(directoryPath, { recursive: true })
-      createRepositoryFile(
-        moduleName,
-        moduleType,
-        `${moduleType}${moduleName}Entity`
-      )
+      createRepositoryFile(moduleName, moduleType)
     }
 
     if (selectedOptions.includes('Router')) {
